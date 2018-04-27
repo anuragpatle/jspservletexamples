@@ -5,8 +5,9 @@ pipeline {
 
 	stages {
 	
-		agent { label 'UbuntuPC' }
+		
 		stage('Compile Stage') {
+		agent { label 'UbuntuPC' }
 			steps {
 				//	sh 'mvn clean compile'
 				sh 'ifconfig'
@@ -15,8 +16,8 @@ pipeline {
 			}
 		}
 		
-		agent { label 'UbuntuPC2' }
 		stage('Testing Stage') {
+		agent { label 'UbuntuPC2' }
 			steps {
 				sh 'ifconfig'
 				echo 'Testing stage'
@@ -24,8 +25,8 @@ pipeline {
 			}
 		}
 		
-		agent { label 'UbuntuPC' }
 		stage('Deployment Stage') {
+		agent { label 'UbuntuPC' }
 			steps {
 					//sh 'mvn deploy'
 					echo 'Deployment is going on'
