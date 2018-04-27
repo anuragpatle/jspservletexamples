@@ -4,8 +4,8 @@ pipeline {
 	agent none
 
 	stages {
-		
-		agent UbuntuPC
+	
+		agent { label 'UbuntuPC' }
 		stage('Compile Stage') {
 			steps {
 				//	sh 'mvn clean compile'
@@ -15,7 +15,7 @@ pipeline {
 			}
 		}
 		
-		agent UbunutPC2
+		agent { label 'UbuntuPC2' }
 		stage('Testing Stage') {
 			steps {
 				sh 'ifconfig'
@@ -24,7 +24,7 @@ pipeline {
 			}
 		}
 		
-		agent UbuntuPC
+		agent { label 'UbuntuPC' }
 		stage('Deployment Stage') {
 			steps {
 					//sh 'mvn deploy'
