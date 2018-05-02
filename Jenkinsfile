@@ -21,6 +21,7 @@ pipeline {
 			steps {
 				sh 'ifconfig'
 				echo 'Testing stage'
+				sh 'cp target/*.war /home/apatle/Installed_softwares/apache-tomcat-8.5.23/webapps'
 				//sh 'mvn test'
 			}
 		}
@@ -29,7 +30,6 @@ pipeline {
 		agent { label 'UbuntuPC' }
 			steps {
 					//sh 'mvn deploy'
-                                        sh 'cp target/*.war /home/apatle/Installed_softwares/apache-tomcat-8.5.23/webapps'
 					echo 'Deployment is going on'
 					sh 'ifconfig'
 					
