@@ -1,13 +1,13 @@
 pipeline {
 
-	agent any
-	//agent none
+	//agent any
+	agent none
 
 	stages {
 	
 		
 		stage('Compile Stage') {
-		
+		agent { label 'master' }
 			steps {
 				//	sh 'mvn clean compile'
 				sh 'ifconfig'
