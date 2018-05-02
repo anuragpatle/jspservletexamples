@@ -7,7 +7,7 @@ pipeline {
 	
 		
 		stage('Compile Stage') {
-		agent { label 'UbuntuPC2' }
+		
 			steps {
 				//	sh 'mvn clean compile'
 				sh 'ifconfig'
