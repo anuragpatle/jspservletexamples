@@ -11,7 +11,8 @@ pipeline {
 			steps {
 				//	sh 'mvn clean compile'
 				sh 'ifconfig'
-				echo 'compile stage'
+				echo 'compile stage,\n and I m '
+				sh 'whoami'
 				sh 'mvn clean install'
 				sh 'cp target/*.war /home/apatle/Installed_softwares/apache-tomcat-8.5.23/webapps'
 				
